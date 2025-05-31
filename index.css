@@ -1,16 +1,13 @@
+/* Fondo general */
 .container {
   background-image: linear-gradient(#051327, #000);
   inset: 0;
   position: fixed;
+  overflow: hidden; /* Asegura que las estrellas no se desborden */
 }
 
+/* Estrellas */
 .space {
-  --size: 2px;
-  --space-layer: 
-    4vw 50vh 0 #fff,
-    18vw 88vh 0 #fff,
-    73vw 14vh 0 #fff;
-  
   width: var(--size);
   height: var(--size);
   background: white;
@@ -19,10 +16,7 @@
   top: 0;
   left: 0;
   opacity: 0.75;
-}
-
-.space {
-   animation: move var(--duration) linear infinite;
+  animation: move var(--duration, 20s) linear infinite;
 }
 
 @keyframes move {
